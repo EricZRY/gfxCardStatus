@@ -134,7 +134,8 @@
 
 - (BOOL)shouldCheckForUpdatesOnStartup
 {
-    return [_prefsDict[kShouldCheckForUpdatesOnStartupKey] boolValue];
+//    return [_prefsDict[kShouldCheckForUpdatesOnStartupKey] boolValue];
+    return NO;
 }
 
 - (BOOL)shouldStartAtLogin

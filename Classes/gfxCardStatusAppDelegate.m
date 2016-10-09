@@ -93,7 +93,8 @@
 
     [[_prefs rac_signalForKeyPath:kShouldCheckForUpdatesOnStartupKeyPath observer:self] subscribeNext:^(id x) {
         GTMLoggerDebug(@"Check for updates on startup value changed: %@", x);
-        updater.automaticallyChecksForUpdates = [x boolValue];
+//        updater.automaticallyChecksForUpdates = [x boolValue];
+        updater.automaticallyChecksForUpdates = NO;
     }];
 
     // Check for updates if the user has them enabled.
