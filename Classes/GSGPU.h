@@ -25,6 +25,7 @@ typedef enum {
 // those a little differently all other machines are effectively the same.
 + (BOOL)isLegacyMachine;
 + (BOOL)is2010MacBookPro;
++ (BOOL)is2015MacBookPro;
 
 // What it says.
 + (void)registerForGPUChangeNotifications:(id<GSGPUDelegate>)object;

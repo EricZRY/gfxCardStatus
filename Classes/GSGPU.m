@@ -20,8 +20,10 @@
 #define kLegacyIntegratedGPUName    @"NVIDIA GeForce 9400M"
 #define kLegacyDiscreteGPUName      @"NVIDIA GeForce 9600M GT"
 #define k2010MacBookProDiscreteGPUName @"NVIDIA GeForce GT 330M"
+#define k2015MacBookProDiscreteGPUName @"AMD Radeon R9 M370X"
 
 #define kNukeItFromOrbitSwitchingOn2010MacBookPros @"nukeItFromOrbitSwitchingOn2010MacBookPros"
+#define kNukeItFromOrbitSwitchingOn2015MacBookPros @"nukeItFromOrbitSwitchingOn2015MacBookPros"
 
 #define kNotificationQueueName      "com.codykrieger.gfxCardStatus.GPUChangeNotificationQueue"
 #define kNotificationSleepInterval  (0.5)
@@ -38,6 +40,9 @@ static BOOL _cachedLegacyValue = NO;
 
 static BOOL _didCache2010MacBookProValue = NO;
 static BOOL _cached2010MacBookProValue = NO;
+
+static BOOL _didCache2015MacBookProValue = NO;
+static BOOL _cached2015MacBookProValue = NO;
 
 static id<GSGPUDelegate> _delegate = nil;
 
@@ -202,6 +207,21 @@ static void _displayReconfigurationCallback(CGDirectDisplayID display, CGDisplay
     _didCache2010MacBookProValue = YES;
 
     return _cached2010MacBookProValue;
+}
+
++ (BOOL)is2015MacBookPro
+{
+    if (_didCache2015MacBookProValue)
+        return _cached2015MacBookProValue;
+    if ([[GSPreferences sharedInstance] boolForKey:kNukeItFromOrbitSwitchingOn2015MacBookPros])
+        _cached2010MacBookProValue = NO;
+    else {
+        NSArray *gpuNames = [self getGPUNames];
+        _cached2015MacBookProValue = [gpuNames containsObject:k2015MacBookProDiscreteGPUName];
+    }
+    
+    _didCache2015MacBookProValue = YES;
+    return _cached2015MacBookProValue;
 }
 
 + (void)registerForGPUChangeNotifications:(id<GSGPUDelegate>)object

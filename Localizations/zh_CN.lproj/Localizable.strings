@@ -10,6 +10,7 @@
 "About"            = "关于 gfxCardStatus, v%%";
 "Update"           = "检查更新...";
 "Preferences"      = "偏好设置...";
+"Card"			   = "显卡: %%";
 "SwitchGPUs"       = "变更 GPUs (试验)";
 "IntegratedOnly"   = "Integrated 集成图形处理器";
 "DiscreteOnly"     = "Discrete 独立图形处理器";
@@ -19,8 +20,9 @@
 "Quit"             = "退出";
 "Close"            = "关闭！";
 "PowerSource"      = "电源: %%";
-"Battery"               = "电池";
-"ACAdapter"             = "电源适配器";
+"Battery"          = "电池";
+"ACAdapter"        = "电源适配器";
+"VisitWebsite"     = "访问网站 (%%)...";
 
 /* Preferences window */
 "PrefTitle"        = "gfxCardStatus 偏好设置";
@@ -30,22 +32,23 @@
 "PrefLog"          = "记录诊断讯息到控制台信息";
 "PrefRestoreState" = "启动时恢复上次的使用模式";
 "PrefPowerSwitching"	= "以电源供应模式切换图形处理器";
-"Integrated"            = "Integrated";
-"Discrete"              = "Discrete";
+"Integrated"            = "核显";
+"Discrete"              = "独显";
 "Dynamic"               = "自动切换";
 "OnBattery"        = "使用电池时:";
 "PluggedIn"        = "电源适配器:";
-"General"               = "General";
-"Switching"             = "Switching";
-"SmartMenuBarIcons"     = "Use smart menu bar icons";
+"General"               = "通用";
+"Switching"             = "切换中";
+"Advanced"              = "高级";
+"SmartMenuBarIcons"     = "使用智能菜单栏图标";
 
 /* About box */
 "AboutTitle"       = "关于 gfxCardStatus";
 "AboutWebsite"     = "网站";
 
 /* Growl */
-"GrowlGPUChanged"       = "GPU changed";
-"GrowlGPUChangedMessage"           = "'%1$@' now in use.";
+"GrowlGPUChanged"       = "显卡 已经切换";
+"GrowlGPUChangedMessage"           = "正在使用 '%1$@'.";
 
 /***** NOT YET LOCALIZED ******/
 

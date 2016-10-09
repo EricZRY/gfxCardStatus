@@ -374,7 +374,7 @@ static void dumpState(io_connect_t connect)
 
 + (BOOL)isOnIntegratedOnlyMode
 {
-    return [self isUsingIntegratedGPU] && ([self isUsingOldStyleSwitchPolicy] || [GSGPU is2010MacBookPro]);
+    return [self isUsingIntegratedGPU] && ([self isUsingOldStyleSwitchPolicy] || [GSGPU is2010MacBookPro] || [GSGPU is2015MacBookPro]);
 }
 
 + (BOOL)isOnDiscreteOnlyMode
